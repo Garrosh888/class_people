@@ -15,7 +15,13 @@ class chelovek():
         print("введите фамилию.")
         self.last_name = str(input())
         print("tell me your age")
-        self.age = int(input())
+        age = False
+        while age == False:
+            try:
+                self.age = int(input())
+                age = True
+            except:
+                print("введи возраст цыфрами")
     def printer(self):
         print(f"my name is {self.name} {self.last_name} and I am {self.age} years old")
     def calculator(self):
